@@ -51,17 +51,17 @@ public class LitCube implements Scene {
     public void draw() {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        Shader shader = mesh.getShader();
-        shader.bind()
-            //Camera
-            .setUniform("uProjection", camera.getProjectionMatrix())
-            .setUniform("uView", camera.getViewMatrix())
+        mesh.getShader()
+            .bind()
+                //Camera
+                .setUniform("uProjection", camera.getProjectionMatrix())
+                .setUniform("uView", camera.getViewMatrix())
 
-            //Luz
-            .setUniform("uLightDir", new Vector3f(1.0f, -1.0f, -1.0f))
-            .setUniform("uAmbientLight", new Vector3f(0.1f, 0.1f, 0.1f))    //Penumbra
-            .setUniform("uDiffuseLight", new Vector3f(1.0f, 1.0f, 0.8f));   //Luz amarelada
-        shader.unbind();
+                //Luz
+                .setUniform("uLightDir", new Vector3f(1.0f, -1.0f, -1.0f))
+                .setUniform("uAmbientLight", new Vector3f(0.1f, 0.1f, 0.1f))    //Penumbra
+                .setUniform("uDiffuseLight", new Vector3f(1.0f, 1.0f, 0.8f))   //Luz amarelada
+            .unbind();
 
         mesh.setUniform("uWorld", new Matrix4f().rotateY(angleY).rotateX(angleX));
         mesh.draw();
