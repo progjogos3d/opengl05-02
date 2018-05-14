@@ -58,7 +58,7 @@ public class LitCube implements Scene {
             .setUniform("uView", camera.getViewMatrix())
 
             //Luz
-            .setUniform("uLightDir", new Vector3f(1.0f, -1.0f, 1.0f))
+            .setUniform("uLightDir", new Vector3f(1.0f, -1.0f, -1.0f))
             .setUniform("uAmbientLight", new Vector3f(0.1f, 0.1f, 0.1f))    //Penumbra
             .setUniform("uDiffuseLight", new Vector3f(1.0f, 1.0f, 0.8f));   //Luz amarelada
         shader.unbind();
