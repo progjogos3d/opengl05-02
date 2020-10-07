@@ -38,6 +38,37 @@ public class MeshFactory {
                         -0.5f,  0.5f,  0.5f,   //21
                         -0.5f, -0.5f, -0.5f,  //22
                         -0.5f,  0.5f, -0.5f)  //23
+                .addVector3fAttribute("aNormal",
+                        //Face próxima
+                        0.0f,  0.0f,  1.0f,
+                        0.0f,  0.0f,  1.0f,
+                        0.0f,  0.0f,  1.0f,
+                        0.0f,  0.0f,  1.0f,
+                        //Face afastada
+                        0.0f,  0.0f, -1.0f,
+                        0.0f,  0.0f, -1.0f,
+                        0.0f,  0.0f, -1.0f,
+                        0.0f,  0.0f, -1.0f,
+                        //Face superior
+                        0.0f,  1.0f,  0.0f,
+                        0.0f,  1.0f,  0.0f,
+                        0.0f,  1.0f,  0.0f,
+                        0.0f,  1.0f,  0.0f,
+                        //Face inferior
+                        0.0f, -1.0f,  0.0f,
+                        0.0f, -1.0f,  0.0f,
+                        0.0f, -1.0f,  0.0f,
+                        0.0f, -1.0f,  0.0f,
+                        //Face direita
+                        1.0f,  0.0f,  0.0f,
+                        1.0f,  0.0f,  0.0f,
+                        1.0f,  0.0f,  0.0f,
+                        1.0f,  0.0f,  0.0f,
+                        //Face esquerda
+                        -1.0f,  0.0f,  0.0f,
+                        -1.0f,  0.0f,  0.0f,
+                        -1.0f,  0.0f,  0.0f,
+                        -1.0f,  0.0f,  0.0f)
                 .setIndexBuffer(
                         //Face próxima
                         0,  2,  3,
